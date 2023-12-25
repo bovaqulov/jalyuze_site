@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex; /* yoki grid deb o'zgartirishingiz mumkin */
+  justify-content: space-between; /* yoki boshqa joylashtirish usullarini ishlatishingiz mumkin */
+  height: 100vh; /* ekran balandligi bo'yiida to'liq ekran bilan to'g'ri keladi */
+}
+
+.box1, .box2 {
+  width: 45%; /* yoki o'zgaruvchini to'g'ri kelganizni o'rganish uchun ishlatishingiz mumkin */
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.box1 {
+  background-color: #f0f0f0;
+}
+
+.box2 {
+  background-color: #e0e0e0;
+}

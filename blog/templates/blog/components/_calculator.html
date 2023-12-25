@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<link href="{% static 'css/style_calculator.css' %}" rel="stylesheet">
+
+<div id="calculator">
+
+    <div class="container_calc">
+        <h2 style="text-align: center">Hisoblash <small id="product_for_clac">TUL 1 metori
+            <div id="prises1">500</div>
+        </small></h2>
+        <div style="
+    display: flex;
+    justify-content: space-between ;
+">
+            <form id="box1">
+                <div class="group_calc">
+                    <input type="number" id="number1" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Bo'yini kiriting (sm)</label>
+                </div>
+
+                <div class="group_calc">
+                    <input type="number" id="number2" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Enini kiriting (sm)</label>
+                </div>
+
+                <div class="group_calc"><input type="number" id="number3" required value="1">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Derazalar sonini kiriting</label>
+                </div>
+                <button class="glow-on-hover" onclick="multiplyNumbers()" type="button">Hisoblash</button>
+                <p id="result"><strong></strong></p>
+            </form>
+            <div id="box2">
+                <p>salom</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="{% static 'js/js_calculator.js' %}"></script>

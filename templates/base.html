@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>
+
+        {% block title %}
+        {% endblock title %}
+
+    </title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"/>
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}"/>
+
+</head>
+<body>
+<main>
+{% include 'components/_header.html' %}
+    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/bg-02.jpg' %}">
+        <div class="container-fluid">
+
+
+            {% include 'components/_navbar.html' %}
+
+            {% include 'components/_th_home.html' %}
+
+            <!-- Features -->
+            {% include 'components/_features.html' %}
+            <!-- Call to Action -->
+
+            {% block main %}
+            {% endblock main %}
+
+
+            {% include 'components/_action.html' %}
+
+            <!-- Page footer -->
+            {% include 'components/_footer.html' %}\
+
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</main>
+</body>
+</html>
