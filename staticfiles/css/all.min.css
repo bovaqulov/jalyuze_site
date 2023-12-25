@@ -5432,6 +5432,13 @@
     content: "\f554"
 }
 
+.fa-location:before {
+    content: "\f601"
+}
+.fa-map-location:before, .fa-map-marked:before {
+    content: "\f59f"
+}
+
 .fa-wallet:before {
     content: "\f555"
 }
