@@ -1,0 +1,132 @@
+<!-- Testimonials header -->
+{% load static %}
+
+<div class="container" id="contact">
+    <section class="row" id="tmServices">
+        <div class="col-12">
+            <div class="parallax-window tm-services-parallax-header tm-testimonials-parallax-header"
+                 data-parallax="scroll"
+                 data-z-index="101">
+
+                <div class="tm-bg-black-transparent text-center tm-services-header tm-testimonials-header">
+                    <h2 class="text-uppercase tm-services-page-title tm-testimonials-page-title">Aloqa</h2>
+                    <p class="tm-services-description mb-0 small">
+                        O'zingiz haqingizda ma'lumot qoldiring. Sizga menejerlarimiz bog'lanishadi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row tm-contact-row">
+        <div class="col-lg-6 tm-contact-col-left">
+            <form action="#" method="POST" id="tmContactForm" class="tm-bg-black-transparent tm-contact-form">
+                <div class="form-group">
+                    <input type="text" id="contact_name" name="contact_name"
+                           class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                           placeholder="Ismingiz"
+                           required="">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact_email" name="contact_email"
+                           class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                           placeholder="Telefon raqamizngiz"
+                           required="">
+                </div>
+                <div class="form-group">
+                <textarea rows="6" id="contact_message" name="contact_message"
+                          class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                          placeholder="Qo'shimcha izoh qoldiring"
+                          required=""></textarea>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-success tm-btn-submit rounded-0 ">
+                        Yuborish
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6 tm-contact-col-right">
+            <div class="tm-bg-black-transparent tm-contact-text">
+
+                <i class="mx-auto mb-5 fas fa-3x fa-address-card tm-app-feature-icon"></i>
+
+                <h3 class="tm-service-tab-title">Sizning ishonchingiz - <br/><br/> Bizning kuchimiz</h3>
+                <p class="tm-service-tab-p">
+                    Gorizontal jalyuzlardan farqli oʻlaroq, vertikal jalyuzi shamol shamolidan zararlanishga
+                    chidamliroq. Bundan tashqari, ularni boshqarish uchun maxsus mahorat talab etilmaydi.
+                </p>
+                <p class="mb-0">
+                    Ba'zan hatto vertikal panjurlar ham eshiklar o'rniga eshiklarga osib qo'yiladi. Bunday pardalar odatda qalin
+                    plastmassadan tayyorlanadi.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    $(function () {
+        $('.tabgroup > div').hide();
+        $('.tabgroup > div:first-of-type').show();
+        $('.tabs a').click(function (e) {
+            e.preventDefault();
+            var $this = $(this),
+                tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
+                others = $this.closest('li').siblings().children('a'),
+                target = $this.attr('href');
+            others.removeClass('active');
+            $this.addClass('active');
+            $(tabgroup).children('div').hide();
+            $(target).show();
+
+            // Scroll to tab content (for mobile)
+            if ($(window).width() < 992) {
+                $('html, body').animate({
+                    scrollTop: $("#first-tab-group").offset().top
+                }, 200);
+            }
+        })
+
+        $('.tm-carousel').slick({
+            dots: true,
+            infinite: false,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    });
+</script>
+</body>
+</html>
